@@ -105,12 +105,12 @@ const SalesOverview = () => {
 
       <div className="lg:flex p-3">
         <div className="lg:w-[45%] w-full flex gap-3 items-end ">
-          {/* <Icon
+          <Icon
             h={18}
             w={18}
             src={"/icons/left.svg"}
             style={"flex items-center justify-center h-[150px]"}
-          /> */}
+          />
           <Image
             className={`object-center `}
             width={26}
@@ -118,6 +118,7 @@ const SalesOverview = () => {
             src="/meter.png"
             alt="img"
           />
+
           <Image
             className={`object-center `}
             width={2}
@@ -125,10 +126,18 @@ const SalesOverview = () => {
             src="/line.png"
             alt="img"
           />
+
           {chartColItem.map((item, index) => (
             <ChartCol key={index} item={item} />
           ))}
         </div>
+
+        <Icon
+          h={18}
+          w={18}
+          src={"/icons/right.svg"}
+          style={"flex items-center justify-center h-[150px]"}
+        />
 
         <div className="lg:w-[53%] lg:my-0 my-5 grid grid-cols-2 gap-3   shadow-x-lg">
           {salesItem.map((item, index) => (

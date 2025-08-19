@@ -18,8 +18,8 @@ const ImageCarousel = ({ title, subtitle, style, w, h, src }) => {
 
       {/* Text on top of overlay */}
       <div className="absolute bottom-5 left-5 text-white z-20">
-        <p>{title}</p>
-        <b>{subtitle}</b>
+        <h2 className="text-[14px]">{title}</h2>
+        <b className="text-[16px]">{subtitle}</b>
       </div>
     </div>
   );
