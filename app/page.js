@@ -1,103 +1,70 @@
-import Image from "next/image";
+"use client";
+import { TypeAnimation } from "react-type-animation";
+import Topbar from "@/components/Dashboard/Topbar";
+import ImageCarousel from "@/components/Dashboard/ImageCarousel";
+import ListingsOverview from "@/components/Dashboard/ListingsOverview";
+import SalesOverview from "@/components/Dashboard/SalesOverview";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const body = [
+    { text: "Total", number: "1.8k" },
+    { text: "Active", number: "80" },
+    { text: "Archived", number: "1k" },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const body2 = [
+    { text: "Total", number: "20.7k" },
+    { text: "Riders", number: "8.5k" },
+    { text: "Subscribers", number: "7.5k" },
+  ];
+
+  return (
+    <div>
+      <Topbar />
+
+      <TypeAnimation
+        sequence={[
+          "Welcome, Ahmed", // 👈 what to type
+          1000, // wait 1s after typing
+        ]}
+        wrapper="p"
+        speed={50}
+        className="my-3 text-lg font-bold"
+        repeat={0} // don’t loop
+      />
+
+      <div className="lg:flex gap-5 ">
+        <SalesOverview />
+        <div>
+          <ListingsOverview
+            heading={"Listings Overview"}
+            body={body}
+            icon="/icons/home-linear.svg"
+          />
+          <ListingsOverview
+            heading={"Users Overview"}
+            body={body2}
+            icon="/icons/profilel.svg"
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+
+      <div className="my-5 lg:flex gap-3  ">
+        <ImageCarousel
+          title={"Most Clicked"}
+          subtitle={"Urban Prime Plaza Premiere"}
+        />
+        <ImageCarousel
+          src={"/img2.jpg"}
+          title={"Most WatchListed"}
+          subtitle={"Urban Prime Plaza Premiere"}
+        />
+        <ImageCarousel
+          src={"/img3.jpg"}
+          title={"Hottest Listing"}
+          subtitle={"Urban Prime Plaza Premiere"}
+        />
+      </div>
     </div>
   );
 }
