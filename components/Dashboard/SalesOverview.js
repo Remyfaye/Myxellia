@@ -140,7 +140,7 @@ const SalesOverview = () => {
                 <p className="w-[500] text-[10px] font-semibold">
                   {item.subtext}
                 </p>
-                <Icon w={14} h={14} src={item.icon} />
+                <Icon src={item.icon} />
                 <p
                   className={`${item.percentColor} font-bold text-[10px] ${
                     index === 3 && "animate-pulse"
