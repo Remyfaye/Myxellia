@@ -23,14 +23,11 @@ export default function Home() {
       <Topbar />
 
       <TypeAnimation
-        sequence={[
-          "Welcome, Ahmed", // 👈 what to type
-          1000, // wait 1s after typing
-        ]}
+        sequence={["Welcome, Ahmed", 1000]}
         wrapper="p"
         speed={50}
         className="my-3 text-lg font-bold"
-        repeat={0} // don’t loop
+        repeat={0}
       />
 
       <div className="lg:flex gap-5 ">
