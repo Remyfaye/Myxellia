@@ -10,14 +10,14 @@ const SalesOverview = () => {
       percent: "2.5%",
       textColor: "text-[#4545FE]",
       percentColor: "text-[#12B76A]",
-      icon: "/icons/frame.svg",
+      icon: "/icons/Frame.svg",
     },
     {
       number: "₦50,000,000.00",
       subtext: "MRR",
       percent: "2.5%",
       textColor: "text-[#12B76A]",
-      icon: "/icons/frame.svg",
+      icon: "/icons/Frame.svg",
       percentColor: "text-[#12B76A]",
     },
     {
@@ -25,7 +25,7 @@ const SalesOverview = () => {
       subtext: "Commission Revenue",
       percent: "0.5%",
       textColor: "text-[#14B8A6]",
-      icon: "/icons/frame.svg",
+      icon: "/icons/Frame.svg",
       percentColor: "text-[#14B8A6]",
     },
     {
@@ -33,7 +33,7 @@ const SalesOverview = () => {
       subtext: "GMV",
       percent: "0.5%",
       textColor: "text-[#F04438]",
-      icon: "/icons/frame2.svg",
+      icon: "/icons/Frame2.svg",
       percentColor: "text-[#F04438]",
     },
   ];

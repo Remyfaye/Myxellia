@@ -22,7 +22,7 @@ const Topbar = () => {
     },
     {
       route: "",
-      icon: "/icons/profile2.svg",
+      icon: "/icons/Profile2.svg",
     },
   ];
 
