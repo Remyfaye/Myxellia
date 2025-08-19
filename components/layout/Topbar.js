@@ -35,8 +35,8 @@ const Topbar = () => {
             key={index}
             style={"hover-animate"}
             src={item.icon}
-            w={32}
-            h={32}
+            w={30}
+            h={30}
           />
         ))}
       </div>
