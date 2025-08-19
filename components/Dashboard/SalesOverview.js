@@ -130,14 +130,14 @@ const SalesOverview = () => {
           {chartColItem.map((item, index) => (
             <ChartCol key={index} item={item} />
           ))}
-        </div>
 
-        <Icon
-          h={18}
-          w={18}
-          src={"/icons/right.svg"}
-          style={"flex items-center justify-center h-[150px]"}
-        />
+          <Icon
+            h={18}
+            w={18}
+            src={"/icons/right.svg"}
+            style={"flex items-center justify-center h-[150px]"}
+          />
+        </div>
 
         <div className="lg:w-[53%] lg:my-0 my-5 grid grid-cols-2 gap-3   shadow-x-lg">
           {salesItem.map((item, index) => (
